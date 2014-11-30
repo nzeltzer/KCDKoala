@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>KCDKoala.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>KCDKoala Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>310495031A0321AF0086D161</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3104950D1A0321AF0086D161</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>310495361A0330E00086D161</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>310495481A0330E00086D161</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>311332411A06A12100F25A20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>311926C91A00226D001A6C39</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>311926D41A00226E001A6C39</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31738F751A03F1E000354199</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31738F7F1A03F1E000354199</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31C3936A1A0052BA001E17E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31C393821A0052BB001E17E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

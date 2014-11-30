@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F6B5AF7B-CBAC-4F63-B38E-E81389D4B6B7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>KCDKoala</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>77100912567A5FA42D8B3F2675445ADD9480B0AC</key>
+		<string>nzeltzer:nzeltzer/koala.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Pod/KCDKoala.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>77100912567A5FA42D8B3F2675445ADD9480B0AC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>nzeltzer:nzeltzer/koala.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>77100912567A5FA42D8B3F2675445ADD9480B0AC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>77100912567A5FA42D8B3F2675445ADD9480B0AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>koala</string>
+		</dict>
+	</array>
+</dict>
+</plist>

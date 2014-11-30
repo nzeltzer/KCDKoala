@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		311332471A06A12100F25A20 /* KCDKoala_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 311332461A06A12100F25A20 /* KCDKoala_Tests.m */; };
+		311332481A06A12100F25A20 /* KCDKoala.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311926CA1A00226E001A6C39 /* KCDKoala.framework */; };
+		312A47601A0AB7F400901F3F /* KCDViewUpdates.h in Headers */ = {isa = PBXBuildFile; fileRef = 312A475F1A0AB7F400901F3F /* KCDViewUpdates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31A42D411A0D5DAC002B6D43 /* KCDInternalTransactions.h in Headers */ = {isa = PBXBuildFile; fileRef = 31A42D401A0D5DAC002B6D43 /* KCDInternalTransactions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31A51ACD1A131C1100042641 /* UITableViewController+KCDKoala.h in Headers */ = {isa = PBXBuildFile; fileRef = 31A51ACB1A131C1100042641 /* UITableViewController+KCDKoala.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31A51ACE1A131C1100042641 /* UITableViewController+KCDKoala.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A51ACC1A131C1100042641 /* UITableViewController+KCDKoala.m */; };
+		31A9FAEF1A146175006B4578 /* UIViewController+KCDKoala.h in Headers */ = {isa = PBXBuildFile; fileRef = 31A9FAED1A146175006B4578 /* UIViewController+KCDKoala.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31A9FAF01A146175006B4578 /* UIViewController+KCDKoala.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A9FAEE1A146175006B4578 /* UIViewController+KCDKoala.m */; };
+		31B476401A1325FE003D3FBB /* UICollectionViewController+KCDKoala.h in Headers */ = {isa = PBXBuildFile; fileRef = 31B4763E1A1325FE003D3FBB /* UICollectionViewController+KCDKoala.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31B476411A1325FE003D3FBB /* UICollectionViewController+KCDKoala.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B4763F1A1325FE003D3FBB /* UICollectionViewController+KCDKoala.m */; };
+		31BD7BAD1A03F51E009A5EB1 /* KCDAbstractObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7B941A03F51E009A5EB1 /* KCDAbstractObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BAE1A03F51E009A5EB1 /* KCDAbstractObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BD7B951A03F51E009A5EB1 /* KCDAbstractObject.m */; };
+		31BD7BAF1A03F51E009A5EB1 /* KCDObjectController.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7B961A03F51E009A5EB1 /* KCDObjectController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BB01A03F51E009A5EB1 /* KCDObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BD7B971A03F51E009A5EB1 /* KCDObjectController.m */; };
+		31BD7BB31A03F51E009A5EB1 /* KCDObjectProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7B9A1A03F51E009A5EB1 /* KCDObjectProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BB41A03F51E009A5EB1 /* KCDSectionContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7B9B1A03F51E009A5EB1 /* KCDSectionContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BB51A03F51E009A5EB1 /* KCDSectionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BD7B9C1A03F51E009A5EB1 /* KCDSectionContainer.m */; };
+		31BD7BB61A03F51E009A5EB1 /* KCDSectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7B9D1A03F51E009A5EB1 /* KCDSectionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BB71A03F51E009A5EB1 /* KCDCollectionViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7B9E1A03F51E009A5EB1 /* KCDCollectionViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BB81A03F51E009A5EB1 /* KCDCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BD7B9F1A03F51E009A5EB1 /* KCDCollectionViewDataSource.m */; };
+		31BD7BB91A03F51E009A5EB1 /* KCDCollectionViewDataSourceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7BA01A03F51E009A5EB1 /* KCDCollectionViewDataSourceDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BBA1A03F51E009A5EB1 /* KCDKoala.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7BA11A03F51E009A5EB1 /* KCDKoala.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BBB1A03F51E009A5EB1 /* KCDScrollViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7BA21A03F51E009A5EB1 /* KCDScrollViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BBC1A03F51E009A5EB1 /* KCDScrollViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BD7BA31A03F51E009A5EB1 /* KCDScrollViewDataSource.m */; };
+		31BD7BBD1A03F51E009A5EB1 /* KCDTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7BA41A03F51E009A5EB1 /* KCDTableViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BBE1A03F51E009A5EB1 /* KCDTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BD7BA51A03F51E009A5EB1 /* KCDTableViewDataSource.m */; };
+		31BD7BBF1A03F51E009A5EB1 /* KCDTableViewDataSourceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7BA61A03F51E009A5EB1 /* KCDTableViewDataSourceDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BC01A03F51E009A5EB1 /* KCDUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7BA71A03F51E009A5EB1 /* KCDUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BC11A03F51E009A5EB1 /* KCDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BD7BA81A03F51E009A5EB1 /* KCDUtilities.m */; };
+		31BD7BD91A03FB89009A5EB1 /* UITableView+KCDKoala.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BD7BD71A03FB89009A5EB1 /* UITableView+KCDKoala.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD7BDA1A03FB89009A5EB1 /* UITableView+KCDKoala.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BD7BD81A03FB89009A5EB1 /* UITableView+KCDKoala.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		311332491A06A12100F25A20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 311926C11A00226D001A6C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 311926C91A00226D001A6C39;
+			remoteInfo = KCDKoala;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		311332421A06A12100F25A20 /* KCDKoala Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KCDKoala Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		311332451A06A12100F25A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/Info.plist; sourceTree = "<group>"; };
+		311332461A06A12100F25A20 /* KCDKoala_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KCDKoala_Tests.m; path = Tests/KCDKoala_Tests.m; sourceTree = "<group>"; };
+		311926CA1A00226E001A6C39 /* KCDKoala.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KCDKoala.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		312A475F1A0AB7F400901F3F /* KCDViewUpdates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDViewUpdates.h; path = Classes/KCDViewUpdates.h; sourceTree = "<group>"; };
+		31A42D401A0D5DAC002B6D43 /* KCDInternalTransactions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDInternalTransactions.h; path = Classes/KCDInternalTransactions.h; sourceTree = "<group>"; };
+		31A51ACB1A131C1100042641 /* UITableViewController+KCDKoala.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewController+KCDKoala.h"; path = "Classes/UITableViewController+KCDKoala.h"; sourceTree = "<group>"; };
+		31A51ACC1A131C1100042641 /* UITableViewController+KCDKoala.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewController+KCDKoala.m"; path = "Classes/UITableViewController+KCDKoala.m"; sourceTree = "<group>"; };
+		31A9FAED1A146175006B4578 /* UIViewController+KCDKoala.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+KCDKoala.h"; path = "Classes/UIViewController+KCDKoala.h"; sourceTree = "<group>"; };
+		31A9FAEE1A146175006B4578 /* UIViewController+KCDKoala.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+KCDKoala.m"; path = "Classes/UIViewController+KCDKoala.m"; sourceTree = "<group>"; };
+		31B4763E1A1325FE003D3FBB /* UICollectionViewController+KCDKoala.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionViewController+KCDKoala.h"; path = "Classes/UICollectionViewController+KCDKoala.h"; sourceTree = "<group>"; };
+		31B4763F1A1325FE003D3FBB /* UICollectionViewController+KCDKoala.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UICollectionViewController+KCDKoala.m"; path = "Classes/UICollectionViewController+KCDKoala.m"; sourceTree = "<group>"; };
+		31BD7B931A03F51E009A5EB1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Assets/Info.plist; sourceTree = "<group>"; };
+		31BD7B941A03F51E009A5EB1 /* KCDAbstractObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDAbstractObject.h; path = Classes/KCDAbstractObject.h; sourceTree = "<group>"; };
+		31BD7B951A03F51E009A5EB1 /* KCDAbstractObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCDAbstractObject.m; path = Classes/KCDAbstractObject.m; sourceTree = "<group>"; };
+		31BD7B961A03F51E009A5EB1 /* KCDObjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDObjectController.h; path = Classes/KCDObjectController.h; sourceTree = "<group>"; };
+		31BD7B971A03F51E009A5EB1 /* KCDObjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCDObjectController.m; path = Classes/KCDObjectController.m; sourceTree = "<group>"; };
+		31BD7B9A1A03F51E009A5EB1 /* KCDObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDObjectProtocol.h; path = Classes/KCDObjectProtocol.h; sourceTree = "<group>"; };
+		31BD7B9B1A03F51E009A5EB1 /* KCDSectionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDSectionContainer.h; path = Classes/KCDSectionContainer.h; sourceTree = "<group>"; };
+		31BD7B9C1A03F51E009A5EB1 /* KCDSectionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCDSectionContainer.m; path = Classes/KCDSectionContainer.m; sourceTree = "<group>"; };
+		31BD7B9D1A03F51E009A5EB1 /* KCDSectionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDSectionProtocol.h; path = Classes/KCDSectionProtocol.h; sourceTree = "<group>"; };
+		31BD7B9E1A03F51E009A5EB1 /* KCDCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDCollectionViewDataSource.h; path = Classes/KCDCollectionViewDataSource.h; sourceTree = "<group>"; };
+		31BD7B9F1A03F51E009A5EB1 /* KCDCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCDCollectionViewDataSource.m; path = Classes/KCDCollectionViewDataSource.m; sourceTree = "<group>"; };
+		31BD7BA01A03F51E009A5EB1 /* KCDCollectionViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDCollectionViewDataSourceDelegate.h; path = Classes/KCDCollectionViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		31BD7BA11A03F51E009A5EB1 /* KCDKoala.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDKoala.h; path = Classes/KCDKoala.h; sourceTree = "<group>"; };
+		31BD7BA21A03F51E009A5EB1 /* KCDScrollViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDScrollViewDataSource.h; path = Classes/KCDScrollViewDataSource.h; sourceTree = "<group>"; };
+		31BD7BA31A03F51E009A5EB1 /* KCDScrollViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCDScrollViewDataSource.m; path = Classes/KCDScrollViewDataSource.m; sourceTree = "<group>"; };
+		31BD7BA41A03F51E009A5EB1 /* KCDTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDTableViewDataSource.h; path = Classes/KCDTableViewDataSource.h; sourceTree = "<group>"; };
+		31BD7BA51A03F51E009A5EB1 /* KCDTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCDTableViewDataSource.m; path = Classes/KCDTableViewDataSource.m; sourceTree = "<group>"; };
+		31BD7BA61A03F51E009A5EB1 /* KCDTableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDTableViewDataSourceDelegate.h; path = Classes/KCDTableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		31BD7BA71A03F51E009A5EB1 /* KCDUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDUtilities.h; path = Classes/KCDUtilities.h; sourceTree = "<group>"; };
+		31BD7BA81A03F51E009A5EB1 /* KCDUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCDUtilities.m; path = Classes/KCDUtilities.m; sourceTree = "<group>"; };
+		31BD7BD71A03FB89009A5EB1 /* UITableView+KCDKoala.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+KCDKoala.h"; path = "Classes/UITableView+KCDKoala.h"; sourceTree = "<group>"; };
+		31BD7BD81A03FB89009A5EB1 /* UITableView+KCDKoala.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+KCDKoala.m"; path = "Classes/UITableView+KCDKoala.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3113323F1A06A12100F25A20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				311332481A06A12100F25A20 /* KCDKoala.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		311926C61A00226D001A6C39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3104952A1A032C120086D161 /* KCDKoala */ = {
+			isa = PBXGroup;
+			children = (
+				31BD7BA11A03F51E009A5EB1 /* KCDKoala.h */,
+				31BD7BD51A03F628009A5EB1 /* KCDObjectController */,
+				31BD7BD61A03F7DF009A5EB1 /* iOS Data Sources */,
+				31BD7BD11A03F5F6009A5EB1 /* Utilities */,
+				314999A21A15B42F009666B1 /* Supporting Files */,
+				311332431A06A12100F25A20 /* Tests */,
+			);
+			name = KCDKoala;
+			sourceTree = "<group>";
+		};
+		311332431A06A12100F25A20 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				311332461A06A12100F25A20 /* KCDKoala_Tests.m */,
+				311332441A06A12100F25A20 /* Supporting Files */,
+			);
+			name = Tests;
+			path = "KCDKoala Tests";
+			sourceTree = "<group>";
+		};
+		311332441A06A12100F25A20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				311332451A06A12100F25A20 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		311926C01A00226D001A6C39 = {
+			isa = PBXGroup;
+			children = (
+				3104952A1A032C120086D161 /* KCDKoala */,
+				311926CB1A00226E001A6C39 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		311926CB1A00226E001A6C39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				311926CA1A00226E001A6C39 /* KCDKoala.framework */,
+				311332421A06A12100F25A20 /* KCDKoala Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31427BF11A21070600E6E504 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				31427BF31A21072300E6E504 /* Protocols */,
+				31427BF21A21071800E6E504 /* Models */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		31427BF21A21071800E6E504 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31BD7B9B1A03F51E009A5EB1 /* KCDSectionContainer.h */,
+				31BD7B9C1A03F51E009A5EB1 /* KCDSectionContainer.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		31427BF31A21072300E6E504 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				312A475F1A0AB7F400901F3F /* KCDViewUpdates.h */,
+				31A42D401A0D5DAC002B6D43 /* KCDInternalTransactions.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		314999A21A15B42F009666B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31BD7B931A03F51E009A5EB1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31B476421A132617003D3FBB /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				31BD7BA01A03F51E009A5EB1 /* KCDCollectionViewDataSourceDelegate.h */,
+				31BD7B9E1A03F51E009A5EB1 /* KCDCollectionViewDataSource.h */,
+				31BD7B9F1A03F51E009A5EB1 /* KCDCollectionViewDataSource.m */,
+				31B4763E1A1325FE003D3FBB /* UICollectionViewController+KCDKoala.h */,
+				31B4763F1A1325FE003D3FBB /* UICollectionViewController+KCDKoala.m */,
+			);
+			name = UICollectionView;
+			sourceTree = "<group>";
+		};
+		31B476431A132624003D3FBB /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				31A51ACB1A131C1100042641 /* UITableViewController+KCDKoala.h */,
+				31A51ACC1A131C1100042641 /* UITableViewController+KCDKoala.m */,
+				31BD7BD71A03FB89009A5EB1 /* UITableView+KCDKoala.h */,
+				31BD7BD81A03FB89009A5EB1 /* UITableView+KCDKoala.m */,
+				31BD7BA61A03F51E009A5EB1 /* KCDTableViewDataSourceDelegate.h */,
+				31BD7BA41A03F51E009A5EB1 /* KCDTableViewDataSource.h */,
+				31BD7BA51A03F51E009A5EB1 /* KCDTableViewDataSource.m */,
+			);
+			name = UITableView;
+			sourceTree = "<group>";
+		};
+		31BD7BD11A03F5F6009A5EB1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				31BD7BA71A03F51E009A5EB1 /* KCDUtilities.h */,
+				31BD7BA81A03F51E009A5EB1 /* KCDUtilities.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		31BD7BD21A03F607009A5EB1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				31BD7B9A1A03F51E009A5EB1 /* KCDObjectProtocol.h */,
+				31BD7B9D1A03F51E009A5EB1 /* KCDSectionProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		31BD7BD41A03F61A009A5EB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31BD7B941A03F51E009A5EB1 /* KCDAbstractObject.h */,
+				31BD7B951A03F51E009A5EB1 /* KCDAbstractObject.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		31BD7BD51A03F628009A5EB1 /* KCDObjectController */ = {
+			isa = PBXGroup;
+			children = (
+				31BD7B961A03F51E009A5EB1 /* KCDObjectController.h */,
+				31BD7B971A03F51E009A5EB1 /* KCDObjectController.m */,
+				31BD7BD41A03F61A009A5EB1 /* Models */,
+				31BD7BD21A03F607009A5EB1 /* Protocols */,
+				31427BF11A21070600E6E504 /* Private */,
+			);
+			name = KCDObjectController;
+			sourceTree = "<group>";
+		};
+		31BD7BD61A03F7DF009A5EB1 /* iOS Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				31A9FAED1A146175006B4578 /* UIViewController+KCDKoala.h */,
+				31A9FAEE1A146175006B4578 /* UIViewController+KCDKoala.m */,
+				31BD7BA21A03F51E009A5EB1 /* KCDScrollViewDataSource.h */,
+				31BD7BA31A03F51E009A5EB1 /* KCDScrollViewDataSource.m */,
+				31B476421A132617003D3FBB /* UICollectionView */,
+				31B476431A132624003D3FBB /* UITableView */,
+			);
+			name = "iOS Data Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		311926C71A00226D001A6C39 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31BD7BD91A03FB89009A5EB1 /* UITableView+KCDKoala.h in Headers */,
+				31BD7BB31A03F51E009A5EB1 /* KCDObjectProtocol.h in Headers */,
+				31B476401A1325FE003D3FBB /* UICollectionViewController+KCDKoala.h in Headers */,
+				31A51ACD1A131C1100042641 /* UITableViewController+KCDKoala.h in Headers */,
+				31BD7BBA1A03F51E009A5EB1 /* KCDKoala.h in Headers */,
+				31BD7BB91A03F51E009A5EB1 /* KCDCollectionViewDataSourceDelegate.h in Headers */,
+				31BD7BAD1A03F51E009A5EB1 /* KCDAbstractObject.h in Headers */,
+				31A42D411A0D5DAC002B6D43 /* KCDInternalTransactions.h in Headers */,
+				31BD7BBD1A03F51E009A5EB1 /* KCDTableViewDataSource.h in Headers */,
+				31BD7BBF1A03F51E009A5EB1 /* KCDTableViewDataSourceDelegate.h in Headers */,
+				312A47601A0AB7F400901F3F /* KCDViewUpdates.h in Headers */,
+				31BD7BAF1A03F51E009A5EB1 /* KCDObjectController.h in Headers */,
+				31BD7BBB1A03F51E009A5EB1 /* KCDScrollViewDataSource.h in Headers */,
+				31BD7BB71A03F51E009A5EB1 /* KCDCollectionViewDataSource.h in Headers */,
+				31BD7BB41A03F51E009A5EB1 /* KCDSectionContainer.h in Headers */,
+				31A9FAEF1A146175006B4578 /* UIViewController+KCDKoala.h in Headers */,
+				31BD7BC01A03F51E009A5EB1 /* KCDUtilities.h in Headers */,
+				31BD7BB61A03F51E009A5EB1 /* KCDSectionProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		311332411A06A12100F25A20 /* KCDKoala Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3113324D1A06A12100F25A20 /* Build configuration list for PBXNativeTarget "KCDKoala Tests" */;
+			buildPhases = (
+				3113323E1A06A12100F25A20 /* Sources */,
+				3113323F1A06A12100F25A20 /* Frameworks */,
+				311332401A06A12100F25A20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3113324A1A06A12100F25A20 /* PBXTargetDependency */,
+			);
+			name = "KCDKoala Tests";
+			productName = "KCDKoala Tests";
+			productReference = 311332421A06A12100F25A20 /* KCDKoala Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		311926C91A00226D001A6C39 /* KCDKoala */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 311926E01A00226F001A6C39 /* Build configuration list for PBXNativeTarget "KCDKoala" */;
+			buildPhases = (
+				311926C51A00226D001A6C39 /* Sources */,
+				311926C61A00226D001A6C39 /* Frameworks */,
+				311926C71A00226D001A6C39 /* Headers */,
+				311926C81A00226D001A6C39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KCDKoala;
+			productName = LBXModularDataSource;
+			productReference = 311926CA1A00226E001A6C39 /* KCDKoala.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		311926C11A00226D001A6C39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "LawBox LLC";
+				TargetAttributes = {
+					311332411A06A12100F25A20 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					311926C91A00226D001A6C39 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 311926C41A00226D001A6C39 /* Build configuration list for PBXProject "KCDKoala" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 311926C01A00226D001A6C39;
+			productRefGroup = 311926CB1A00226E001A6C39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				311926C91A00226D001A6C39 /* KCDKoala */,
+				311332411A06A12100F25A20 /* KCDKoala Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		311332401A06A12100F25A20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		311926C81A00226D001A6C39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3113323E1A06A12100F25A20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				311332471A06A12100F25A20 /* KCDKoala_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		311926C51A00226D001A6C39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31BD7BB01A03F51E009A5EB1 /* KCDObjectController.m in Sources */,
+				31BD7BDA1A03FB89009A5EB1 /* UITableView+KCDKoala.m in Sources */,
+				31BD7BBE1A03F51E009A5EB1 /* KCDTableViewDataSource.m in Sources */,
+				31BD7BBC1A03F51E009A5EB1 /* KCDScrollViewDataSource.m in Sources */,
+				31B476411A1325FE003D3FBB /* UICollectionViewController+KCDKoala.m in Sources */,
+				31A9FAF01A146175006B4578 /* UIViewController+KCDKoala.m in Sources */,
+				31BD7BB51A03F51E009A5EB1 /* KCDSectionContainer.m in Sources */,
+				31BD7BB81A03F51E009A5EB1 /* KCDCollectionViewDataSource.m in Sources */,
+				31BD7BAE1A03F51E009A5EB1 /* KCDAbstractObject.m in Sources */,
+				31A51ACE1A131C1100042641 /* UITableViewController+KCDKoala.m in Sources */,
+				31BD7BC11A03F51E009A5EB1 /* KCDUtilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3113324A1A06A12100F25A20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 311926C91A00226D001A6C39 /* KCDKoala */;
+			targetProxy = 311332491A06A12100F25A20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3113324B1A06A12100F25A20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KCDKoala Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "KCDKoala Tests";
+			};
+			name = Debug;
+		};
+		3113324C1A06A12100F25A20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KCDKoala Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "KCDKoala Tests";
+			};
+			name = Release;
+		};
+		311926DE1A00226E001A6C39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		311926DF1A00226E001A6C39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		311926E11A00226F001A6C39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Assets/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = KCDKoala;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		311926E21A00226F001A6C39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Assets/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = KCDKoala;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3113324D1A06A12100F25A20 /* Build configuration list for PBXNativeTarget "KCDKoala Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3113324B1A06A12100F25A20 /* Debug */,
+				3113324C1A06A12100F25A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		311926C41A00226D001A6C39 /* Build configuration list for PBXProject "KCDKoala" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				311926DE1A00226E001A6C39 /* Debug */,
+				311926DF1A00226E001A6C39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		311926E01A00226F001A6C39 /* Build configuration list for PBXNativeTarget "KCDKoala" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				311926E11A00226F001A6C39 /* Debug */,
+				311926E21A00226F001A6C39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 311926C11A00226D001A6C39 /* Project object */;
+}
