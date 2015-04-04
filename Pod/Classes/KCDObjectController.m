@@ -85,13 +85,14 @@ NSInteger const * KCDTransactionCountContext;
 
 #pragma mark - Initialization
 
-- (instancetype)initWithDelegate:(id<KCDObjectControllerDelegate>)delegate;
+- (instancetype)initWithDelegate:(id<KCDObjectControllerDelegate>)delegate
+                        sections:(NSArray *)KCDSections;
 {
     self = [super init];
     if (self) {
         DLog(@"[+] %@", NSStringFromClass([self class]));
         [self setDelegate:delegate]; // Necessary to trigger delegate flag setup.
-        _KCDSectionObjects = [NSMutableArray new];
+        _KCDSectionObjects = ([KCDSections count] > 0) ? [NSMutableArray arrayWithArray:KCDSections] : [NSMutableArray arrayWithArray:@[KCDNewSectionWithNameAndObjects(nil, nil)]];
         _KCDAnimationQueue = dispatch_queue_create("com.koala.animate", DISPATCH_QUEUE_SERIAL);
         _KCDAnimationGroup = dispatch_group_create();
         _KCDTransactionQueue = dispatch_queue_create("com.koala.update", DISPATCH_QUEUE_SERIAL);
@@ -108,12 +109,11 @@ NSInteger const * KCDTransactionCountContext;
     return self;
 }
 
-- (instancetype)initWithDelegate:(id<KCDObjectControllerDelegate>)delegate
-                        sections:(NSArray *)KCDSections;
+- (instancetype)initWithDelegate:(id<KCDObjectControllerDelegate>)delegate;
 {
-    self = [self initWithDelegate:delegate];
+    self = [self initWithDelegate:delegate sections:nil];
     if (self) {
-        _KCDSectionObjects = [NSMutableArray arrayWithArray:KCDSections];
+        
     }
     return self;
 }
@@ -1050,7 +1050,7 @@ NSInteger const * KCDTransactionCountContext;
 {
     id<KCDObject>object = nil;
     if (indexPath.section < _KCDSectionObjects.count) {
-    id<KCDSection> section = _KCDSectionObjects[indexPath.section];
+        id<KCDSection> section = _KCDSectionObjects[indexPath.section];
         if (indexPath.row < section.objects.count) {
             object = [section objectAtIndex:indexPath.row];
         }
@@ -1386,7 +1386,7 @@ NSInteger const * KCDTransactionCountContext;
                   atIndexPaths:(NSArray *)indexPaths
                      animation:(NSInteger)animation;
 {
-        
+    
     NSAssert([objects count] == [indexPaths count],
              @"Count mismatch: %@ items; %@ indexPaths",
              @([objects count]),
@@ -1710,7 +1710,7 @@ NSInteger const * KCDTransactionCountContext;
 {
     // This is accomplished as a series of transactions; nesting this call inside of a queuing
     // method may have unexpected results.
-        
+    
     NSIndexPath* (^indexPathOfObject)(NSArray *, id<KCDObject>, NSEnumerationOptions) =
     ^NSIndexPath*(NSArray *sections, id<KCDObject> object, NSEnumerationOptions options) {
         // Section objects are ordered sets; this will be fast.

@@ -23,7 +23,6 @@
                                                    initWithDelegate:self
                                                    sections:KCDSections];
         [self setKCDObjectController:datasource];
-        [datasource setCollectionView:self.collectionView];
         NSAssert([NSThread isMainThread], @"Attempt to initialize off of main thread");
     }
     return self;
@@ -47,7 +46,6 @@
                           sections:nil];
         }
         [self setKCDObjectController:dataSource];
-        [dataSource setCollectionView:self.collectionView];
         NSAssert([NSThread isMainThread],
                  @"Attempt to initialize off of main thread");
     }

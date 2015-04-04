@@ -36,10 +36,10 @@ UIKIT_EXTERN NSString * const kKCDTransactionCount;
 
 @property (nonatomic, readwrite, weak) id <KCDObjectControllerDelegate> delegate;
 
-- (instancetype)initWithDelegate:(id<KCDObjectControllerDelegate>)delegate NS_DESIGNATED_INITIALIZER;
-
 - (instancetype)initWithDelegate:(id<KCDObjectControllerDelegate>)delegate
-                        sections:(NSArray *)KCDSections;
+                        sections:(NSArray *)KCDSections NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)initWithDelegate:(id<KCDObjectControllerDelegate>)delegate;
 
 #pragma mark - Message Forwarding
 
