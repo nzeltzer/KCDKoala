@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3101C4B01AD04B4C0066E59C /* KCDKoala.m in Sources */ = {isa = PBXBuildFile; fileRef = 3101C4AF1AD04B4C0066E59C /* KCDKoala.m */; };
 		311332471A06A12100F25A20 /* KCDKoala_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 311332461A06A12100F25A20 /* KCDKoala_Tests.m */; };
 		311332481A06A12100F25A20 /* KCDKoala.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311926CA1A00226E001A6C39 /* KCDKoala.framework */; };
 		312A47601A0AB7F400901F3F /* KCDViewUpdates.h in Headers */ = {isa = PBXBuildFile; fileRef = 312A475F1A0AB7F400901F3F /* KCDViewUpdates.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3101C4AF1AD04B4C0066E59C /* KCDKoala.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCDKoala.m; path = Classes/KCDKoala.m; sourceTree = "<group>"; };
 		311332421A06A12100F25A20 /* KCDKoala Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KCDKoala Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		311332451A06A12100F25A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/Info.plist; sourceTree = "<group>"; };
 		311332461A06A12100F25A20 /* KCDKoala_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KCDKoala_Tests.m; path = Tests/KCDKoala_Tests.m; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				31BD7BA11A03F51E009A5EB1 /* KCDKoala.h */,
+				3101C4AF1AD04B4C0066E59C /* KCDKoala.m */,
 				31BD7BD51A03F628009A5EB1 /* KCDObjectController */,
 				31BD7BD61A03F7DF009A5EB1 /* iOS Data Sources */,
 				31BD7BD11A03F5F6009A5EB1 /* Utilities */,
@@ -348,6 +351,7 @@
 					};
 					311926C91A00226D001A6C39 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 9R69TJ2TU5;
 					};
 				};
 			};
@@ -403,6 +407,7 @@
 				31BD7BB01A03F51E009A5EB1 /* KCDObjectController.m in Sources */,
 				31BD7BDA1A03FB89009A5EB1 /* UITableView+KCDKoala.m in Sources */,
 				31BD7BBE1A03F51E009A5EB1 /* KCDTableViewDataSource.m in Sources */,
+				3101C4B01AD04B4C0066E59C /* KCDKoala.m in Sources */,
 				31BD7BBC1A03F51E009A5EB1 /* KCDScrollViewDataSource.m in Sources */,
 				31B476411A1325FE003D3FBB /* UICollectionViewController+KCDKoala.m in Sources */,
 				31A9FAF01A146175006B4578 /* UIViewController+KCDKoala.m in Sources */,

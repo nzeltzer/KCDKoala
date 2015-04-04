@@ -42,6 +42,7 @@ typedef struct {
 @synthesize tableView = _tableView;
 @dynamic transactionStaggerDuration;
 @dynamic sectionObjects;
+@dynamic delegate;
 
 - (instancetype)initWithDelegate:(id<KCDObjectControllerDelegate>)delegate;
 {

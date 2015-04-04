@@ -44,9 +44,6 @@
 
 #endif
 
-double KCDKoalaVersionNumber = 0.8;
-const unsigned char KCDKoalaVersionString[] = "0.8";
-
 //! Project version number for KCDKoala.
 FOUNDATION_EXPORT double KCDKoalaVersionNumber;
 
