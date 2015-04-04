@@ -90,7 +90,7 @@ NSInteger const * KCDTransactionCountContext;
     self = [super init];
     if (self) {
         DLog(@"[+] %@", NSStringFromClass([self class]));
-        _delegate = delegate;
+        [self setDelegate:delegate]; // Necessary to trigger delegate flag setup.
         _KCDSectionObjects = [NSMutableArray new];
         _KCDAnimationQueue = dispatch_queue_create("com.koala.animate", DISPATCH_QUEUE_SERIAL);
         _KCDAnimationGroup = dispatch_group_create();
