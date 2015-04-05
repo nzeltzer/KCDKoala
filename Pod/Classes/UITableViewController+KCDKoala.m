@@ -28,7 +28,6 @@
                                               initWithDelegate:self
                                               sections:sections];
         [self setKCDObjectController:dataSource];
-        [dataSource setTableView:self.tableView];
     }
     return self;
 }
@@ -42,7 +41,6 @@
                                               initWithDelegate:self
                                               sections:KCDSections];
         [self setKCDObjectController:dataSource];
-        [dataSource setTableView:self.tableView];
     }
     return self;
 }
