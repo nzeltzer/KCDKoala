@@ -68,6 +68,6 @@ NSColor * KCDRandomColor();
 
 @interface NSMutableArray (KCDKoala)
 
-- (BOOL)KCDMoveObjectAtIndex:(NSInteger)index toIndex:(NSInteger)toIndex;
+- (BOOL)KCDArrayMoveObjectAtIndex:(NSInteger)index toIndex:(NSInteger)toIndex;
 
 @end

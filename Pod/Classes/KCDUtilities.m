@@ -255,7 +255,7 @@ NSArray *KCDRandomObjects(Class objectClass, NSInteger minimumObjects)
 
 @implementation NSMutableArray (KCDKoala)
 
-- (BOOL)KCDMoveObjectAtIndex:(NSInteger)index toIndex:(NSInteger)toIndex;
+- (BOOL)KCDArrayMoveObjectAtIndex:(NSInteger)index toIndex:(NSInteger)toIndex;
 {
     if (toIndex < self.count) {
         id obj = self[index];
