@@ -160,7 +160,7 @@ typedef struct {
     [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(koala:tableView:commitEditingStyle:forObject:atIndexPath:)];
     _tableViewDelegateFlags.accessoryButtonTapped =
     [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(koala:tableView:accessoryButtonTappedForObject:withIndexPath:)];
-    _tableViewDelegateFlags.didDeleteCellForTableViewObject = [self.delegate respondsToSelector:@selector(tableView:didDeleteCellForTableViewObject:)];
+    _tableViewDelegateFlags.didDeleteCellForTableViewObject = [delegate respondsToSelector:@selector(koala:tableView:didDeleteCellForTableViewObject:)];
     [super setDelegate:delegate];
     // Regenerate delegate response struct
     [self.tableView setDelegate:self];
