@@ -64,6 +64,11 @@
     return sectionCopy;
 }
 
+- (void)setSectionIdentifier:(NSString *)sectionIdentifier;
+{
+    _sectionIdentifier = [sectionIdentifier copy];
+}
+
 #pragma mark - Adding/Removing
 
 - (NSInteger)indexOfObject:(id<KCDObject>)object;

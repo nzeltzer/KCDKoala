@@ -93,6 +93,14 @@
 @property (nonatomic, readwrite, copy) NSString *sectionName;
 
 /**
+ A section identifier is a string value used for resolving <NSObject> isEqual and hash methods.
+ @param sectionIdentifier A string to use for evaluating equality against other sections.
+ @note By default, each section generates its own unique section identifier.
+ */
+
+- (void)setSectionIdentifier:(NSString *)sectionIdentifier;
+
+/**
  Adds the object to the section.
  @param index. On return, the value of the index at which the object was inserted.
  */
