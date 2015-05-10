@@ -64,6 +64,18 @@ didDeselectObject:(id<KCDObject>)tableViewObject
                 cellForObject:(id<KCDObject>)tableViewObject
                   atIndexPath:(NSIndexPath*)indexPath;
 
+- (UIView *)koala:(KCDObjectController<KCDIntrospective>*)koala
+        tableView:(UITableView *)tableView viewForHeaderInSection:(id<KCDSection>)section;
+
+- (CGFloat)koala:(KCDObjectController<KCDIntrospective>*)koala
+       tableView:(UITableView *)tableView heightForHeaderInSection:(id<KCDSection>)section;
+
+- (UIView *)koala:(KCDObjectController<KCDIntrospective>*)koala
+        tableView:(UITableView *)tableView viewForFooterInSection:(id<KCDSection>)section;
+
+- (CGFloat)koala:(KCDObjectController<KCDIntrospective>*)koala
+       tableView:(UITableView *)tableView heightForFooterInSection:(id<KCDSection>)section;
+
 
 @end
 

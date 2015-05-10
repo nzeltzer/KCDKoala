@@ -149,13 +149,13 @@ typedef struct {
     _tableViewDelegateFlags.cellForObject =
     [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(koala:tableView:cellForObject:atIndexPath:)];
     _tableViewDelegateFlags.viewForHeader =
-    [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(tableView:viewForHeaderInSection:)];
+    [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(koala:tableView:viewForHeaderInSection:)];
     _tableViewDelegateFlags.viewForFooter =
-    [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(tableView:viewForFooterInSection:)];
+    [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(koala:tableView:viewForFooterInSection:)];
     _tableViewDelegateFlags.heightForHeader =
-    [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(tableView:heightForHeaderInSection:)];
+    [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(koala:tableView:heightForHeaderInSection:)];
     _tableViewDelegateFlags.heightForFooter =
-    [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(tableView:heightForFooterInSection:)];
+    [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(koala:tableView:heightForFooterInSection:)];
     _tableViewDelegateFlags.commitEditing =
     [(id<UITableViewDelegate>)delegate respondsToSelector:@selector(koala:tableView:commitEditingStyle:forObject:atIndexPath:)];
     _tableViewDelegateFlags.accessoryButtonTapped =
@@ -218,7 +218,7 @@ typedef struct {
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-     KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
+    KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
     id <KCDObject>cellObject = nil;
     if ((cellObject = [self objectAtIndexPath:indexPath])) {
         if (_tableViewDelegateFlags.canMoveObject) {
@@ -459,11 +459,13 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;
 {
-    UITableViewHeaderFooterView *view = nil;
-    if (_tableViewDelegateFlags.viewForHeader)
-    {
-        return [(id<UITableViewDelegate>)self.delegate tableView:tableView viewForHeaderInSection:section];
+    id<KCDSection> module = [self.sectionObjects objectAtIndex:section];
+    if (_tableViewDelegateFlags.viewForHeader) {
+        return [self.tableViewDelegate koala:self
+                                   tableView:tableView
+                      viewForHeaderInSection:module];
     }
+    UITableViewHeaderFooterView *view = nil;
     NSString *sectionHeaderTitle = nil;
     if ((sectionHeaderTitle = [self tableView:tableView titleForHeaderInSection:section]))
     {
@@ -482,11 +484,13 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 - (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;
 {
-    UITableViewHeaderFooterView *view = nil;
-    if (_tableViewDelegateFlags.viewForFooter)
-    {
-        return [(id<UITableViewDelegate>)self.delegate tableView:tableView viewForFooterInSection:section];
+    id<KCDSection> module = [self.sectionObjects objectAtIndex:section];
+    if (_tableViewDelegateFlags.viewForFooter) {
+        return [self.tableViewDelegate koala:self
+                                   tableView:tableView
+                      viewForFooterInSection:module];
     }
+    UITableViewHeaderFooterView *view = nil;
     if ([self tableView:tableView titleForFooterInSection:section])
     {
         static NSString *identifier = @"KCDTableViewDataSourceFooterIdentifier";
@@ -504,7 +508,10 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 {
     CGFloat height = 0;
     if (_tableViewDelegateFlags.heightForHeader) {
-        height = [(id<UITableViewDelegate>)self.delegate tableView:tableView heightForHeaderInSection:section];
+        id<KCDSection> module = [self.sectionObjects objectAtIndex:section];
+        height = [self.tableViewDelegate koala:self
+                                     tableView:tableView
+                      heightForHeaderInSection:module];
     } else if ([self tableView:tableView titleForHeaderInSection:section]/* && numberOfSections > 0*/) {
         height = 30;
     } else {
@@ -518,7 +525,10 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 {
     CGFloat height = 0;
     if (_tableViewDelegateFlags.heightForFooter) {
-        height = [(id<UITableViewDelegate>)self.delegate tableView:tableView heightForFooterInSection:section];
+        id<KCDSection> module = [self.sectionObjects objectAtIndex:section];
+        height = [self.tableViewDelegate koala:self
+                                     tableView:tableView
+                      heightForFooterInSection:module];
     } else if ([self tableView:tableView titleForFooterInSection:section]) {
         height = 30;
     } else {
@@ -543,12 +553,12 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     
     // TODO: Table View row snapping
     /**
-    if ([self.tableView snapsToRows] &&
-        scrollView == _tableView)
-    {
-        CGPoint targetPoint = [(UITableView*)scrollView snapContentOffsetForOffset:*targetContentOffset];
-        *targetContentOffset = targetPoint;
-    }
+     if ([self.tableView snapsToRows] &&
+     scrollView == _tableView)
+     {
+     CGPoint targetPoint = [(UITableView*)scrollView snapContentOffsetForOffset:*targetContentOffset];
+     *targetContentOffset = targetPoint;
+     }
      */
     
     if (_scrollViewDelegateFlags.scrollViewWillEndDragging_withVelocity_targetContentOffset) {
