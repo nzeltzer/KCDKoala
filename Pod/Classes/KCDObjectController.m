@@ -1652,9 +1652,6 @@ NSInteger const * KCDTransactionCountContext;
                 [section removeObject:anObjectToDelete];
             }
             [self deleteViewsAtIndexPaths:indexPathsToDelete withAnimation:animation];
-            if ([[section objects] count] == 0) {
-                [self deleteSection:section animation:animation];
-            }
         }
     }
 }
