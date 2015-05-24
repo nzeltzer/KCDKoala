@@ -41,6 +41,13 @@ UIKIT_EXTERN NSString * const kKCDTransactionCount;
 
 - (instancetype)initWithDelegate:(id<KCDObjectControllerDelegate>)delegate;
 
+/**
+ Reset the object controller's sections with the provided sections.
+ @note This is not a scheduled transaction, and should only be used to set the initial sections composition where it is not possible to intialize the datasource and its seed data at the same time – e.g., where you want to provide an empty object controller via a superclass. 
+ */
+
+- (void)resetSections:(NSArray *)sections;
+
 #pragma mark - Message Forwarding
 
 /**

@@ -911,6 +911,13 @@ NSInteger const * KCDTransactionCountContext;
     return _KCDSectionObjects;
 }
 
+- (void)resetSections:(NSArray *)sections;
+{
+    NSMutableArray *sectionCopies = KCDMutableCopySectionsArray(sections);
+    [self setSectionObjects:sectionCopies];
+    [self reloadData];
+}
+
 - (void)setSectionObjects:(NSMutableArray *)sectionObjects;
 {
     [self willChangeValueForKey:kKCDSectionObjects];
