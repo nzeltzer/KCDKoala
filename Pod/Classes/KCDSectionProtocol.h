@@ -23,6 +23,13 @@
 
 @property (nonatomic, readonly, strong) NSOrderedSet *objects;
 
+
+/**
+ @return Count of all objects contained within the section.
+ */
+
+@property (nonatomic, readonly) NSInteger count;
+
 /**
  A string value that can be used for section indices.
  */

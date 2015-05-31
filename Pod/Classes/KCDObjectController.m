@@ -82,6 +82,9 @@ NSInteger const * KCDTransactionCountContext;
 @dynamic sections;
 @dynamic objects;
 @dynamic sectionObjects;
+@dynamic objectCount;
+@dynamic sectionCount;
+@dynamic allIndexPaths;
 
 #pragma mark - Initialization
 
@@ -839,6 +842,33 @@ NSInteger const * KCDTransactionCountContext;
 }
 
 #pragma mark - Accessors
+
+- (NSArray *)allIndexPaths;
+{
+    NSMutableArray *paths = [NSMutableArray new];
+    [self.sectionObjects enumerateObjectsUsingBlock:^(id<KCDSection>aSection, NSUInteger idx, BOOL *stop) {
+        for (NSInteger x = 0; x < aSection.count; x++)
+        {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:x inSection:idx];
+            [paths addObject:indexPath];
+        }
+    }];
+    return paths;
+}
+
+- (NSInteger)objectCount;
+{
+    NSInteger count = 0;
+    for (id<KCDSection> aSection in self.sectionObjects) {
+        count += aSection.count;
+    }
+    return count;
+}
+
+- (NSInteger)sectionCount;
+{
+    return self.sectionObjects.count;
+}
 
 - (id<KCDSection>)localSectionForSection:(id<KCDSection>)section;
 {

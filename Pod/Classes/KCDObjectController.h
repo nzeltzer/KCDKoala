@@ -29,9 +29,9 @@ UIKIT_EXTERN NSString * const kKCDTransactionCount;
     dispatch_queue_t _KCDAnimationQueue; // Serial queue for scheduling view updates.
     dispatch_queue_t _KCDTransactionQueue; // Serial queue for pre-scheduling updates.
     dispatch_group_t _KCDTransactionGroup; // Group for pre-scheduling updates.
-    NSMutableArray *_KCDSectionObjects;
-    NSInteger _KCDTransactionCount;
-    NSTimeInterval _KCDTransactionDelay;
+    NSMutableArray *_KCDSectionObjects; // The internal section container storage array for the active state.
+    NSInteger _KCDTransactionCount; // The current transaction count.
+    NSTimeInterval _KCDTransactionDelay; // The delay applied to queued transactions (to allow animation completion time).
 }
 
 @property (nonatomic, readwrite, weak) id <KCDObjectControllerDelegate> delegate;
@@ -51,7 +51,7 @@ UIKIT_EXTERN NSString * const kKCDTransactionCount;
 #pragma mark - Message Forwarding
 
 /**
- Returns an array of protocols, methods of which can be forwarded to this object's delegate, where this object does not implement the corresponding method.
+ @return an array of protocols, methods of which can be forwarded to this object's delegate, where this object does not implement the corresponding method.
  @example Return the UITableViewDelegate protocol to allow forwarding of unimplemented UITableViewDelegate methods to a data source's delegate.
  */
 
@@ -95,14 +95,14 @@ UIKIT_EXTERN NSString * const kKCDTransactionCount;
 #pragma mark - Factory Methods
 
 /**
- Returns a new empty section object conforming to KCDSection.
+ @return a new empty section object conforming to KCDSection.
  @note This method does not insert the freshly created section object.
  */
 
 - (id<KCDMutableSection>)newSectionWithName:(NSString *)sectionName objects:(NSArray *)objects;
 
 /**
- Returns a new empty section object conforming to KCDSection.
+ @return a new empty section object conforming to KCDSection.
  @note This method does not insert the newly created section object.
  */
 
@@ -145,6 +145,7 @@ UIKIT_EXTERN NSString * const kKCDTransactionCount;
 
 /**
  Creates and adds a new section to the end of the controller's managed sections.
+ @return The newly inserted section.
  */
 
 - (id<KCDSection>)addSectionWithName:(NSString *)sectionName
@@ -392,66 +393,78 @@ UIKIT_EXTERN NSString * const kKCDTransactionCount;
 
 @optional
 
-/** Returns an array of KCDSectionObjectProtocol conformant objects representing the sections contained in this controller. */
+/** @return an array of KCDSectionObjectProtocol conformant objects representing the sections contained in this controller. */
 
 @property (nonatomic, readonly) NSArray *sections;
 
-/** Returns an array of KCDObject conformant objects representing the objects contained in this controller. */
+/** @return an array of KCDObject conformant objects representing the objects contained in this controller. */
 
 @property (nonatomic, readonly) NSArray *objects;
 
+/** @return NSArray containing all of the index paths for objects managed by the controller. */
+
+@property (nonatomic, readonly) NSArray *allIndexPaths;
+
+/** @return Count of all objects managed by the controller.*/
+
+@property (nonatomic, readonly) NSInteger objectCount;
+
+/** @return Count of all section containers. */
+
+@property (nonatomic, readonly) NSInteger sectionCount;
+
 #pragma mark Introspection
 
-/**
- Returns all of the cell objects.
- */
+/** @return all of the cell objects. */
 
 - (NSArray*)allObjects;
 
 /**
  Checks if any of the data source's sections contain the given object.
  @param anObject The object to check for inclusion.
+ @return YES if any section contains the provided object; otherwise, NO.
  */
 
 - (BOOL)containsObject:(id<KCDObject>)anObject;
 
 /**
- Returns an array of index paths for the corresponding objects.
+ @return an array of index paths for the corresponding objects.
  @param objects The objects for which the indexPaths must be determined.
  */
 
 - (NSArray*)indexPathsForObjects:(NSArray*)objects;
 
 /**
- Returns the index path for the corresponding object.
+ @return the index path for the corresponding object.
  @param object The object for which the indexPath must be derived.
  */
 
 - (NSIndexPath*)indexPathForObject:(id<KCDObject>)object;
 
 /**
- Returns the object corresponding to the provided index path.
+ @return the object corresponding to the provided index path.
  @param indexPath The indexPath for the requested object.
  */
 
 - (id<KCDObject>)objectAtIndexPath:(NSIndexPath*)indexPath;
 
 /**
- Returns the objects corresponding to the provided index paths.
+ @return the objects corresponding to the provided index paths.
  @param indexPaths The indexPaths for the requested objects.
  */
 
 - (NSArray *)objectsForIndexPaths:(NSArray *)indexPaths;
 
 /**
- Returns the section corresponding to the given index.
+ @return the section corresponding to the given index.
  @param sectionIndex The index that the section can be located at.
  */
 
 - (id<KCDSection>)sectionAtIndex:(NSUInteger)sectionIndex;
 
 /**
- Returns the index for the given section.
+ @return the index for the given section.
+ @param aSection the section for which the index should be returned.
  */
 
 - (NSUInteger)indexForSection:(id<KCDSection>)aSection;

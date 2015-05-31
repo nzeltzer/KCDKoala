@@ -33,7 +33,7 @@
 @synthesize predicate = _predicate;
 @synthesize sortDescriptors = _sortDescriptors;
 
-@dynamic objects;
+@dynamic objects, count;
 
 #pragma mark - Initialization
 
@@ -292,6 +292,11 @@
 }
 
 #pragma mark - Accessors
+
+- (NSInteger)count;
+{
+    return [self.objects count];
+}
 
 - (NSMutableOrderedSet *)objects;
 {
