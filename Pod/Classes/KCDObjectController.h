@@ -442,6 +442,19 @@ UIKIT_EXTERN NSString * const kKCDTransactionCount;
 - (NSIndexPath*)indexPathForObject:(id<KCDObject>)object;
 
 /**
+ @return the index paths for all objects in the given section.
+ */
+
+- (NSArray *)indexPathsForSection:(id<KCDSection>)section;
+
+/**
+ @return the index paths for all objects in the section at the given index.
+ @param index The index of the section.
+*/
+
+- (NSArray *)indexPathsForSectionAtIndex:(NSUInteger)index;
+
+/**
  @return the object corresponding to the provided index path.
  @param indexPath The indexPath for the requested object.
  */

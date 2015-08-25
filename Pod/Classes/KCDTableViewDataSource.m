@@ -470,7 +470,7 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     if ((sectionHeaderTitle = [self tableView:tableView titleForHeaderInSection:section]))
     {
         static NSString *identifier = @"KCDTableViewDataSourceHeaderIdentifier";
-        if (!(view = [tableView dequeueReusableCellWithIdentifier:identifier]))
+        if (!(view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier]))
         {
             view = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:identifier];
         }
@@ -494,7 +494,7 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     if ([self tableView:tableView titleForFooterInSection:section])
     {
         static NSString *identifier = @"KCDTableViewDataSourceFooterIdentifier";
-        if (!(view = [tableView dequeueReusableCellWithIdentifier:identifier]))
+        if (!(view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier]))
         {
             view = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:identifier];
             [view.contentView setBackgroundColor:[UIColor colorWithWhite:0.5 alpha:1]];

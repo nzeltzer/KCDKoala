@@ -88,6 +88,11 @@ NSInteger const * KCDTransactionCountContext;
 
 #pragma mark - Initialization
 
+- (instancetype)init;
+{
+    return [self initWithDelegate:nil sections:nil];
+}
+
 - (instancetype)initWithDelegate:(id<KCDObjectControllerDelegate>)delegate
                         sections:(NSArray *)KCDSections;
 {
@@ -1115,6 +1120,28 @@ NSInteger const * KCDTransactionCountContext;
     return index;
 }
 
+- (NSArray *)indexPathsForSection:(id<KCDSection>)section;
+{
+    NSInteger sectionIndex = [self indexForSection:section];
+    NSMutableArray *indexPaths = [NSMutableArray new];
+    [[section objects] enumerateObjectsUsingBlock:^(id<KCDObject> __nonnull obj, NSUInteger idx, BOOL * __nonnull stop) {
+        NSIndexPath *aPath = [NSIndexPath indexPathForRow:idx inSection:sectionIndex];
+        [indexPaths addObject:aPath];
+    }];
+    if (indexPaths.count == 0) {
+        return nil;
+    }
+    return indexPaths;
+}
+- (NSArray *)indexPathsForSectionAtIndex:(NSUInteger)index;
+{
+    id<KCDSection> aSection = nil;
+    if ((aSection = [self sectionAtIndex:index])) {
+        return [self indexPathsForSection:aSection];
+    }
+    return nil;
+}
+
 #pragma mark - Factory Methods
 
 + (id<KCDMutableSection>)sectionWithName:(NSString *)sectionName objects:(NSArray *)objects;
@@ -1213,7 +1240,7 @@ NSInteger const * KCDTransactionCountContext;
     if (aSection.objects.count > 0) {
         // If the section came with any objects, insert those rows now.
         NSMutableArray *indexPaths = [NSMutableArray new];
-        [aSection.objects enumerateObjectsUsingBlock:^(id<KCDObjectControllerDelegate> obj, NSUInteger idx, BOOL *stop) {
+        [aSection.objects enumerateObjectsUsingBlock:^(id<KCDObject> obj, NSUInteger idx, BOOL *stop) {
             NSIndexPath *anIndexPath = [NSIndexPath indexPathForRow:idx inSection:sectionIndex];
             [indexPaths addObject:anIndexPath];
         }];
@@ -1235,7 +1262,7 @@ NSInteger const * KCDTransactionCountContext;
     NSInteger insertIndex = _KCDSectionObjects.count;
     [_KCDSectionObjects insertObject:aSection atIndex:insertIndex];
     NSMutableArray *indexPaths = [NSMutableArray new];
-    [[aSection objects] enumerateObjectsUsingBlock:^(id<KCDObjectControllerDelegate> obj, NSUInteger idx, BOOL *stop) {
+    [[aSection objects] enumerateObjectsUsingBlock:^(id<KCDObject> obj, NSUInteger idx, BOOL *stop) {
         NSIndexPath *anIndexPath = [NSIndexPath indexPathForRow:idx inSection:insertIndex];
         [indexPaths addObject:anIndexPath];
     }];

@@ -8,6 +8,8 @@
 
 @import Foundation;
 
+#import "KCDRuntime.h"
+
 /** 
  KCDSectionProtocol defines the interface for section container objects.
  KCDObjectController uses a private implementation of this protocol; you should not attempt to create protocol compatible objects of your own.
@@ -21,7 +23,7 @@
  An ordered set in which the section stores its objects.
  */
 
-@property (nonatomic, readonly, strong) NSOrderedSet *objects;
+@property (nonatomic, readonly, strong) NSOrderedSet KCDGeneric(id<KCDObject>) *objects;
 
 
 /**
@@ -53,7 +55,7 @@
  */
 
 - (instancetype)initWithSectionName:(NSString*)sectionName
-                            objects:(NSArray*)objects;
+                            objects:(NSArray KCDGeneric(id<KCDObject>) *)objects;
 
 /**
  Returns YES if the section currently contains the object.
@@ -169,16 +171,16 @@
 
 #pragma mark Sorting
 
-- (void)setSortDescriptors:(NSArray *)sortDescriptors
+- (void)setSortDescriptors:(NSArray KCDGeneric(NSSortDescriptor *) *)sortDescriptors
                 oldIndices:(NSIndexSet **)oldIndices
                 newIndices:(NSIndexSet **)newIndices;
 
-- (void)sortUsingDescriptors:(NSArray *)sortDescriptors
+- (void)sortUsingDescriptors:(NSArray KCDGeneric(NSSortDescriptor *) *)sortDescriptors
                   oldIndexes:(NSArray **)oldIndexes
                   newIndexes:(NSArray **)newIndexes;
 
 - (void)sortUsingComparator:(NSComparator)cmptr;
 
-- (void)sortUsingDescriptors:(NSArray *)sortDescriptors;
+- (void)sortUsingDescriptors:(NSArray KCDGeneric(NSSortDescriptor *) *)sortDescriptors;
 
 @end

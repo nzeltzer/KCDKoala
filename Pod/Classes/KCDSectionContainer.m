@@ -17,9 +17,9 @@
 
 @interface KCDSectionContainer () <KCDSortableSection>
 
-@property (nonatomic, readwrite, strong) NSMutableOrderedSet *objects;
-@property (nonatomic, readwrite, strong) NSMutableOrderedSet *unfilteredObjects;
-@property (nonatomic, readwrite, strong) NSMutableOrderedSet *filteredObjects;
+@property (nonatomic, readwrite, strong) NSMutableOrderedSet KCDGeneric(id<KCDObject>) *objects;
+@property (nonatomic, readwrite, strong) NSMutableOrderedSet KCDGeneric(id<KCDObject>) *unfilteredObjects;
+@property (nonatomic, readwrite, strong) NSMutableOrderedSet KCDGeneric(id<KCDObject>) *filteredObjects;
 @property (nonatomic, readonly, copy) NSString *sectionIdentifier;
 
 @end
@@ -37,8 +37,13 @@
 
 #pragma mark - Initialization
 
+- (instancetype)init;
+{
+    return [self initWithSectionName:nil objects:nil];
+}
+
 - (instancetype)initWithSectionName:(NSString*)sectionName
-                            objects:(NSArray*)objects;
+                            objects:(NSArray KCDGeneric(id<KCDObject>) *)objects;
 {
     self = [super init];
     if (self) {
@@ -206,7 +211,7 @@
 
 #pragma mark - Sorting
 
-- (void)setSortDescriptors:(NSArray *)sortDescriptors
+- (void)setSortDescriptors:(NSArray KCDGeneric(NSSortDescriptor *) *)sortDescriptors
                 oldIndices:(NSIndexSet **)oldIndices
                 newIndices:(NSIndexSet **)newIndices;
 {
@@ -231,7 +236,7 @@
     }
 }
 
-- (void)sortUsingDescriptors:(NSArray *)sortDescriptors 
+- (void)sortUsingDescriptors:(NSArray KCDGeneric(NSSortDescriptor *) *)sortDescriptors
                   oldIndexes:(NSArray**)oldIndices
                   newIndexes:(NSArray**)newIndices;
 {
@@ -276,7 +281,7 @@
     [self.objects sortUsingComparator:cmptr];
 }
 
-- (void)sortUsingDescriptors:(NSArray*)sortDescriptors;
+- (void)sortUsingDescriptors:(NSArray KCDGeneric(NSSortDescriptor *) *)sortDescriptors;
 {
     [self.objects sortUsingDescriptors:sortDescriptors];
 }
@@ -284,7 +289,7 @@
 // Predicates affect adding objects, etc. 
 // Does not handle inserts/delete animation: datasource must reload data for section.
 
-- (NSMutableOrderedSet *)filteredObjectsWithPredicate:(NSPredicate*)predicate;
+- (NSMutableOrderedSet KCDGeneric(id<KCDObject>) *)filteredObjectsWithPredicate:(NSPredicate*)predicate;
 {
     NSMutableOrderedSet *filteredObjects = [self.unfilteredObjects mutableCopy];
     [filteredObjects filterUsingPredicate:predicate];
@@ -298,7 +303,7 @@
     return [self.objects count];
 }
 
-- (NSMutableOrderedSet *)objects;
+- (NSMutableOrderedSet KCDGeneric(id<KCDObject>) *)objects;
 {
     // If a filter has been applied to this section, return the filtered objects.
     return ([self filteredObjects]) ? [self filteredObjects] : [self unfilteredObjects];

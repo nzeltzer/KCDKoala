@@ -20,7 +20,7 @@
 #pragma mark Initialization
 
 - (instancetype)initWithSectionName:(NSString*)sectionName
-                            objects:(NSArray*)objects NS_DESIGNATED_INITIALIZER;
+                            objects:(NSArray KCDGeneric(id<KCDObject>) *)objects NS_DESIGNATED_INITIALIZER;
 
 #pragma mark Introspection
 
