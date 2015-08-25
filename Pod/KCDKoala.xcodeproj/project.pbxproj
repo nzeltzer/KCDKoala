@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3101C4B01AD04B4C0066E59C /* KCDKoala.m in Sources */ = {isa = PBXBuildFile; fileRef = 3101C4AF1AD04B4C0066E59C /* KCDKoala.m */; };
+		310425DA1B8CE03000B5E6B3 /* KCDRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 310425D91B8CE02F00B5E6B3 /* KCDRuntime.h */; settings = {ASSET_TAGS = (); }; };
 		311332471A06A12100F25A20 /* KCDKoala_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 311332461A06A12100F25A20 /* KCDKoala_Tests.m */; };
 		311332481A06A12100F25A20 /* KCDKoala.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311926CA1A00226E001A6C39 /* KCDKoala.framework */; };
 		312A47601A0AB7F400901F3F /* KCDViewUpdates.h in Headers */ = {isa = PBXBuildFile; fileRef = 312A475F1A0AB7F400901F3F /* KCDViewUpdates.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		3101C4AF1AD04B4C0066E59C /* KCDKoala.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCDKoala.m; path = Classes/KCDKoala.m; sourceTree = "<group>"; };
+		310425D91B8CE02F00B5E6B3 /* KCDRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCDRuntime.h; path = Classes/KCDRuntime.h; sourceTree = "<group>"; };
 		311332421A06A12100F25A20 /* KCDKoala Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KCDKoala Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		311332451A06A12100F25A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/Info.plist; sourceTree = "<group>"; };
 		311332461A06A12100F25A20 /* KCDKoala_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KCDKoala_Tests.m; path = Tests/KCDKoala_Tests.m; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				31BD7BA71A03F51E009A5EB1 /* KCDUtilities.h */,
 				31BD7BA81A03F51E009A5EB1 /* KCDUtilities.m */,
+				310425D91B8CE02F00B5E6B3 /* KCDRuntime.h */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				31BD7BB71A03F51E009A5EB1 /* KCDCollectionViewDataSource.h in Headers */,
 				31BD7BB41A03F51E009A5EB1 /* KCDSectionContainer.h in Headers */,
 				31A9FAEF1A146175006B4578 /* UIViewController+KCDKoala.h in Headers */,
+				310425DA1B8CE03000B5E6B3 /* KCDRuntime.h in Headers */,
 				31BD7BC01A03F51E009A5EB1 /* KCDUtilities.h in Headers */,
 				31BD7BB61A03F51E009A5EB1 /* KCDSectionProtocol.h in Headers */,
 			);
