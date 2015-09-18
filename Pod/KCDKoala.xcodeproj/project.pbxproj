@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3101C4B01AD04B4C0066E59C /* KCDKoala.m in Sources */ = {isa = PBXBuildFile; fileRef = 3101C4AF1AD04B4C0066E59C /* KCDKoala.m */; };
-		310425DA1B8CE03000B5E6B3 /* KCDRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 310425D91B8CE02F00B5E6B3 /* KCDRuntime.h */; settings = {ASSET_TAGS = (); }; };
+		310425DA1B8CE03000B5E6B3 /* KCDRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 310425D91B8CE02F00B5E6B3 /* KCDRuntime.h */; };
 		311332471A06A12100F25A20 /* KCDKoala_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 311332461A06A12100F25A20 /* KCDKoala_Tests.m */; };
 		311332481A06A12100F25A20 /* KCDKoala.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311926CA1A00226E001A6C39 /* KCDKoala.framework */; };
 		312A47601A0AB7F400901F3F /* KCDViewUpdates.h in Headers */ = {isa = PBXBuildFile; fileRef = 312A475F1A0AB7F400901F3F /* KCDViewUpdates.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -347,7 +347,7 @@
 		311926C11A00226D001A6C39 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "LawBox LLC";
 				TargetAttributes = {
 					311332411A06A12100F25A20 = {
@@ -485,6 +485,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -558,6 +559,8 @@
 				INFOPLIST_FILE = Assets/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULE_NAME = KCDKoala;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = KCDKoala;
 				SKIP_INSTALL = YES;
 			};
@@ -573,6 +576,8 @@
 				INFOPLIST_FILE = Assets/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULE_NAME = KCDKoala;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.koala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = KCDKoala;
 				SKIP_INSTALL = YES;
 			};

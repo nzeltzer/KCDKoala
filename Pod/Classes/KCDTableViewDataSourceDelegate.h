@@ -11,8 +11,7 @@
 
 #import "KCDScrollViewDataSource.h"
 
-@class KCDObjectController;
-
+@class KCDTableViewDataSource;
 
 /**
  The KCDTableViewDataSourceDelegate protocol reimplements UITableViewDataSource methods to provide additional context.
@@ -24,56 +23,56 @@
 
 @optional
 
-- (BOOL)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (BOOL)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
     tableView:(UITableView *)tableView
-canMoveObject:(id<KCDObject>)tableViewObject
+canMoveObject:(id<KCDTableViewObject>)tableViewObject
   atIndexPath:(NSIndexPath *)indexPath;
 
-- (BOOL)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (BOOL)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
             tableView:(UITableView *)tableView
-    canEditObject:(id<KCDObject>)tableViewObject
+    canEditObject:(id<KCDTableViewObject>)tableViewObject
       atIndexPath:(NSIndexPath *)indexPath;
 
-- (void)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (void)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
     tableView:(UITableView *)tableView
-  didSelectObject:(id<KCDObject>)tableViewObject
+  didSelectObject:(id<KCDTableViewObject>)tableViewObject
       atIndexPath:(NSIndexPath*)indexPath;
 
-- (void)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (void)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
     tableView:(UITableView *)tableView
-didDeselectObject:(id<KCDObject>)tableViewObject
+didDeselectObject:(id<KCDTableViewObject>)tableViewObject
       atIndexPath:(NSIndexPath *)indexPath;
 
-- (CGFloat)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (CGFloat)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
        tableView:(UITableView *)tableView
- heightForObject:(id<KCDObject>)tableViewObject;
+ heightForObject:(id<KCDTableViewObject>)tableViewObject;
 
-- (void)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (void)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
     tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-        forObject:(id<KCDObject>)tableViewObject
+        forObject:(id<KCDTableViewObject>)tableViewObject
       atIndexPath:(NSIndexPath *)indexPath;
 
-- (void)koala:(KCDObjectController<KCDIntrospective>*)koala
-    tableView:(UITableView *)tableView accessoryButtonTappedForObject:(id<KCDObject>)tableViewObject withIndexPath:(NSIndexPath *)indexPath;
+- (void)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
+    tableView:(UITableView *)tableView accessoryButtonTappedForObject:(id<KCDTableViewObject>)tableViewObject withIndexPath:(NSIndexPath *)indexPath;
 
-- (void)koala:(KCDObjectController<KCDIntrospective>*)koala
-    tableView:(UITableView *)tableView didDeleteCellForTableViewObject:(id<KCDObject>)tableViewObject;
+- (void)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
+    tableView:(UITableView *)tableView didDeleteCellForTableViewObject:(id<KCDTableViewObject>)tableViewObject;
 
-- (UITableViewCell*)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (UITableViewCell*)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
                 tableView:(UITableView *)tableView
-                cellForObject:(id<KCDObject>)tableViewObject
+                cellForObject:(id<KCDTableViewObject>)tableViewObject
                   atIndexPath:(NSIndexPath*)indexPath;
 
-- (UIView *)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (UIView *)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
         tableView:(UITableView *)tableView viewForHeaderInSection:(id<KCDSection>)section;
 
-- (CGFloat)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (CGFloat)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
        tableView:(UITableView *)tableView heightForHeaderInSection:(id<KCDSection>)section;
 
-- (UIView *)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (UIView *)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
         tableView:(UITableView *)tableView viewForFooterInSection:(id<KCDSection>)section;
 
-- (CGFloat)koala:(KCDObjectController<KCDIntrospective>*)koala
+- (CGFloat)koala:(KCDTableViewDataSource<KCDIntrospective>*)koala
        tableView:(UITableView *)tableView heightForFooterInSection:(id<KCDSection>)section;
 
 
