@@ -1,11 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'KCDKoala', :exclusive => true do
+target 'KCDKoala Sample', :exclusive => true do
   pod "KCDKoala", :path => "../"
-end
-
-target 'Tests', :exclusive => true do
-  pod "KCDKoala", :path => "../"
-
-  
 end
