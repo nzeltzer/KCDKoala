@@ -171,9 +171,9 @@
             id<KCDSection>newSection2 = [KCDRandomSectionsWithIdentifier([KCDDemoObject class], identifier, 1, 1) firstObject];
             [newArrangement insertObject:newSection2 atIndex:arc4random() % newArrangement.count];
             // Shuffle sections up to three times.
-            [newArrangement KCDMoveObjectAtIndex:arc4random() % newArrangement.count toIndex:arc4random() % newArrangement.count];
-            [newArrangement KCDMoveObjectAtIndex:arc4random() % newArrangement.count toIndex:arc4random() % newArrangement.count];
-            [newArrangement KCDMoveObjectAtIndex:arc4random() % newArrangement.count toIndex:arc4random() % newArrangement.count];
+            [newArrangement KCDArrayMoveObjectAtIndex:arc4random() % newArrangement.count toIndex:arc4random() % newArrangement.count];
+            [newArrangement KCDArrayMoveObjectAtIndex:arc4random() % newArrangement.count toIndex:arc4random() % newArrangement.count];
+            [newArrangement KCDArrayMoveObjectAtIndex:arc4random() % newArrangement.count toIndex:arc4random() % newArrangement.count];
         }
         // Delete random objects from the sections
         [newArrangement enumerateObjectsUsingBlock:^(id<KCDMutableSection>section, NSUInteger idx, BOOL *stop) {

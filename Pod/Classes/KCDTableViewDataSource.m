@@ -180,9 +180,9 @@ typedef struct {
     return 44.0f;
 }
 
-- (void)tableView:(UITableView*)tableView didDeleteCellForTableViewObject:(id<KCDObject>)tableViewObject;
+- (void)tableView:(UITableView*)tableView didDeleteCellForTableViewObject:(id<KCDTableViewObject>)tableViewObject;
 {
-    KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
+    KCDTableViewDataSource <KCDIntrospective> *__weak weakSelf = self;
     if (_tableViewDelegateFlags.didDeleteCellForTableViewObject)
     {
         [self.tableViewDelegate koala:weakSelf tableView:tableView didDeleteCellForTableViewObject:tableViewObject];
@@ -191,9 +191,9 @@ typedef struct {
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
-    id <KCDObject>cellObject = nil;
-    if ((cellObject = [self objectAtIndexPath:indexPath])) {
+    KCDTableViewDataSource <KCDIntrospective> *__weak weakSelf = self;
+    id <KCDTableViewObject>cellObject = nil;
+    if ((cellObject = (id<KCDTableViewObject>)[self objectAtIndexPath:indexPath])) {
         if (_tableViewDelegateFlags.commitEditing) {
             [self.delegate
              koala:weakSelf
@@ -218,9 +218,9 @@ typedef struct {
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
-    id <KCDObject>cellObject = nil;
-    if ((cellObject = [self objectAtIndexPath:indexPath])) {
+    KCDTableViewDataSource <KCDIntrospective> *__weak weakSelf = self;
+    id <KCDTableViewObject>cellObject = nil;
+    if ((cellObject = (id<KCDTableViewObject>)[self objectAtIndexPath:indexPath])) {
         if (_tableViewDelegateFlags.canMoveObject) {
             return [self.delegate
                     koala:weakSelf
@@ -242,9 +242,9 @@ typedef struct {
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
-    id <KCDObject>cellObject = nil;
-    if ((cellObject = [self objectAtIndexPath:indexPath])) {
+    KCDTableViewDataSource <KCDIntrospective> *__weak weakSelf = self;
+    id <KCDTableViewObject>cellObject = nil;
+    if ((cellObject = (id<KCDTableViewObject>)[self objectAtIndexPath:indexPath])) {
         if (_tableViewDelegateFlags.canEditObject) {
             return [self.delegate
                     koala:weakSelf
@@ -282,7 +282,7 @@ typedef struct {
         cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     UITableViewCell *cell = nil;
-    KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
+    KCDTableViewDataSource <KCDIntrospective> *__weak weakSelf = self;
     id <KCDTableViewObject>cellObject = nil;
     if ((cellObject = (id<KCDTableViewObject>)[self objectAtIndexPath:indexPath])) {
         if (_tableViewDelegateFlags.cellForObject) {
@@ -373,11 +373,11 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath;
 {
-    KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
+    KCDTableViewDataSource <KCDIntrospective> *__weak weakSelf = self;
     
     if (_tableViewDelegateFlags.accessoryButtonTapped) {
-        id <KCDObject> cellObject = nil;
-        if ((cellObject = [self objectAtIndexPath:indexPath])) {
+        id <KCDTableViewObject> cellObject = nil;
+        if ((cellObject = (id<KCDTableViewObject>)[self objectAtIndexPath:indexPath])) {
             [self.delegate
              koala:weakSelf
              tableView:tableView
@@ -393,10 +393,10 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
+    KCDTableViewDataSource <KCDIntrospective> *__weak weakSelf = self;
     if (_tableViewDelegateFlags.didSelectObject) {
-        id <KCDObject> cellObject = nil;
-        if ((cellObject = [self objectAtIndexPath:indexPath])) {
+        id <KCDTableViewObject> cellObject = nil;
+        if ((cellObject = (id<KCDTableViewObject>)[self objectAtIndexPath:indexPath])) {
             [self.delegate
              koala:weakSelf
              tableView:tableView
@@ -412,11 +412,11 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
+    KCDTableViewDataSource <KCDIntrospective> *__weak weakSelf = self;
     if (_tableViewDelegateFlags.didDeselectObject)
     {
-        id <KCDObject> cellObject = nil;
-        if ((cellObject = [self objectAtIndexPath:indexPath])) {
+        id <KCDTableViewObject> cellObject = nil;
+        if ((cellObject = (id<KCDTableViewObject>)[self objectAtIndexPath:indexPath])) {
             [self.delegate
              koala:weakSelf
              tableView:tableView
@@ -434,7 +434,7 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    KCDObjectController <KCDIntrospective> *__weak weakSelf = self;
+    KCDTableViewDataSource <KCDIntrospective> *__weak weakSelf = self;
     CGFloat height = 0;
     id<KCDTableViewObject>cellObject = nil;
     if ((cellObject = (id<KCDTableViewObject>)[self objectAtIndexPath:indexPath])) {

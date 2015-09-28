@@ -23,6 +23,7 @@
 
 // Utilities
 
+#import "KCDRuntime.h"
 #import "KCDUtilities.h"
 
 #if TARGET_OS_IPHONE

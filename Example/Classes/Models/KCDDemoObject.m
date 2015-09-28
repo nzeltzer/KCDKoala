@@ -21,6 +21,8 @@ NSString * const KCDSquareCellIdentifier = @"KCDSquareCellIdentifier";
 
 @implementation KCDDemoObject
 
+@dynamic identifier;
+
 #pragma mark - KCDObject Subclass
 
 - (void)configureCollectionViewCell:(UICollectionViewCell *)cell;

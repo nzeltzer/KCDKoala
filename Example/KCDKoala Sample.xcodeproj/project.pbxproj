@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		311458ED1A1D6DC20050B97C /* KCDKoala.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313A5D831A1C7C3D007043A9 /* KCDKoala.framework */; };
-		311458EE1A1D6DC20050B97C /* KCDKoala.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 313A5D831A1C7C3D007043A9 /* KCDKoala.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3141ED661A2BD375002EE816 /* KCDObjectController+KCDDemoApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3141ED571A2BD375002EE816 /* KCDObjectController+KCDDemoApp.m */; };
 		3141ED671A2BD375002EE816 /* NSString+KCDDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3141ED591A2BD375002EE816 /* NSString+KCDDemo.m */; };
 		3141ED681A2BD375002EE816 /* UIColor+KCDDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3141ED5B1A2BD375002EE816 /* UIColor+KCDDemo.m */; };
@@ -29,7 +27,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				311458EE1A1D6DC20050B97C /* KCDKoala.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,7 +34,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		313A5D831A1C7C3D007043A9 /* KCDKoala.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KCDKoala.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3141ED561A2BD375002EE816 /* KCDObjectController+KCDDemoApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KCDObjectController+KCDDemoApp.h"; sourceTree = "<group>"; };
 		3141ED571A2BD375002EE816 /* KCDObjectController+KCDDemoApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KCDObjectController+KCDDemoApp.m"; sourceTree = "<group>"; };
 		3141ED581A2BD375002EE816 /* NSString+KCDDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KCDDemo.h"; sourceTree = "<group>"; };
@@ -66,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				311458ED1A1D6DC20050B97C /* KCDKoala.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +135,6 @@
 				3141ED5C1A2BD375002EE816 /* Models */,
 				3141ED5F1A2BD375002EE816 /* Views */,
 				3141ED771A2BD397002EE816 /* Supporting Files */,
-				313A5D831A1C7C3D007043A9 /* KCDKoala.framework */,
 				31F107AA1A15B057006C97F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -334,6 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Assets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -347,6 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Assets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

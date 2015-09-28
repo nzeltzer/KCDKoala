@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3101C4B01AD04B4C0066E59C /* KCDKoala.m in Sources */ = {isa = PBXBuildFile; fileRef = 3101C4AF1AD04B4C0066E59C /* KCDKoala.m */; };
-		310425DA1B8CE03000B5E6B3 /* KCDRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 310425D91B8CE02F00B5E6B3 /* KCDRuntime.h */; };
+		310425DA1B8CE03000B5E6B3 /* KCDRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 310425D91B8CE02F00B5E6B3 /* KCDRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		311332471A06A12100F25A20 /* KCDKoala_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 311332461A06A12100F25A20 /* KCDKoala_Tests.m */; };
 		311332481A06A12100F25A20 /* KCDKoala.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311926CA1A00226E001A6C39 /* KCDKoala.framework */; };
 		312A47601A0AB7F400901F3F /* KCDViewUpdates.h in Headers */ = {isa = PBXBuildFile; fileRef = 312A475F1A0AB7F400901F3F /* KCDViewUpdates.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -500,6 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -539,6 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -552,10 +554,10 @@
 		311926E11A00226F001A6C39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Assets/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -569,10 +571,10 @@
 		311926E21A00226F001A6C39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Assets/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
