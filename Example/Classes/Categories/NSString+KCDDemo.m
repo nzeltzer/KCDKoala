@@ -47,7 +47,8 @@
 - (CGFloat)heightForCellInTableView:(UITableView *)tableView;
 {
     CGRect bounding = (CGRect){ .size = CGSizeMake(tableView.frame.size.width, CGFLOAT_MAX) };
-    return [KCDDemoTableViewCell drawTitle:self inRect:bounding context:NULL].height;
+    CGFloat height = [KCDDemoTableViewCell drawTitle:self inRect:bounding context:NULL].height;
+    return height;
 }
 
 @end

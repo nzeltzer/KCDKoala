@@ -56,7 +56,7 @@ NSString * const KCDDemoCollectionViewAPISample = @"UICollectionView API Read-Al
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 {
     
-    self.viewController = ({
+    _viewController = ({
         // NSString+KCDKoala brings NSString into conformance with the KCDTableViewObject and KCDCollectionViewObject protocols.
         // As conformant objects, we can initialize a table view controller directly.
         NSArray *cellNames = @[KCDDemoTableViewAPISample,
@@ -76,18 +76,21 @@ NSString * const KCDDemoCollectionViewAPISample = @"UICollectionView API Read-Al
         UITableViewController *viewController = [[UITableViewController alloc]
                                                  initWithStyle:UITableViewStyleGrouped
                                                  objects:cellNames];
+        [viewController.KCDDataSource setTableView:viewController.tableView];
+        viewController.title = NSLocalizedString(@"KCDKoala Demo", nil);
         [viewController.KCDDataSource setDelegate:self];
         viewController;
     });
     
-    self.navigationController = ({
+    _navigationController = ({
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+        nav.view.backgroundColor = [UIColor blueColor];
         nav;
     });
     
-    self.window = ({
+    _window = ({
         UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        window.backgroundColor = [UIColor whiteColor];
+        window.backgroundColor = [UIColor orangeColor];
         [window setRootViewController:self.navigationController];
         window;
     });
@@ -224,12 +227,16 @@ didSelectItem:(id<KCDObject>)item
         [[(UICollectionViewController*)controller collectionView]
          registerClass:[UICollectionViewCell class]
          forCellWithReuseIdentifier:NSStringFromClass([UIColor class])];
+        [(KCDCollectionViewDataSource *)[(UICollectionViewController *)controller KCDObjectController]
+         setCollectionView:[(UICollectionViewController *)controller collectionView]];
         [(UICollectionViewController *)controller setEditing:YES animated:NO];
     }
     if ([NSStringFromClass(viewControllerClass) isEqualToString:NSStringFromClass([UITableViewController class])]) {
         controller = [[UITableViewController alloc]
                       initWithStyle:UITableViewStylePlain
                       objects:colorsArray];
+        [(KCDTableViewDataSource *)[(UITableViewController *)controller KCDObjectController]
+         setTableView:[(UITableViewController *)controller tableView]];
         [(UITableViewController *)controller setEditing:YES animated:NO];
     }
     [controller.KCDObjectController setDelegate:self];
@@ -258,11 +265,15 @@ didSelectItem:(id<KCDObject>)item
         [[(UICollectionViewController *)controller collectionView]
          registerClass:[KCDDemoTableCollectionViewCell class]
          forCellWithReuseIdentifier:NSStringFromClass([NSString class])];
+        [(KCDCollectionViewDataSource *)[(UICollectionViewController *)controller KCDObjectController]
+         setCollectionView:[(UICollectionViewController *)controller collectionView]];
     }
     if ([NSStringFromClass(viewControllerClass) isEqualToString:NSStringFromClass([UITableViewController class])]) {
         controller = [[UITableViewController alloc]
                       initWithStyle:UITableViewStylePlain
                       sections:stringSections];
+        [(KCDTableViewDataSource *)[(UITableViewController *)controller KCDObjectController]
+         setTableView:[(UITableViewController *)controller tableView]];
     }
     [controller.KCDObjectController setDelegate:self];
     [self.navigationController pushViewController:controller animated:YES];
@@ -279,11 +290,15 @@ didSelectItem:(id<KCDObject>)item
                       initWithLayout:[self flowLayout]
                       sections:randomSections];
         [(UICollectionViewController *)controller KCDCellClassRegister:[KCDDemoObject class]];
+        [(KCDCollectionViewDataSource *)[(UICollectionViewController *)controller KCDObjectController]
+         setCollectionView:[(UICollectionViewController *)controller collectionView]];
     }
     if ([NSStringFromClass(viewControllerClass) isEqualToString:NSStringFromClass([UITableViewController class])]) {
         controller = [[UITableViewController alloc]
                       initWithStyle:UITableViewStyleGrouped
                       sections:randomSections];
+        [(KCDTableViewDataSource *)[(UITableViewController *)controller KCDObjectController]
+         setTableView:[(UITableViewController *)controller tableView]];
     }
     [controller.KCDObjectController setDelegate:self];
     [self.navigationController pushViewController:controller animated:YES];
@@ -302,11 +317,15 @@ didSelectItem:(id<KCDObject>)item
                       initWithLayout:layout
                       sections:randomSections];
         [(UICollectionViewController *)controller KCDCellClassRegister:[KCDDemoObject class]];
+        [(KCDCollectionViewDataSource *)[(UICollectionViewController *)controller KCDObjectController]
+         setCollectionView:[(UICollectionViewController *)controller collectionView]];
     }
     if ([NSStringFromClass(viewControllerClass) isEqualToString:NSStringFromClass([UITableViewController class])]) {
         controller = [[UITableViewController alloc]
                       initWithStyle:UITableViewStyleGrouped
                       sections:randomSections];
+        [(KCDTableViewDataSource *)[(UITableViewController *)controller KCDObjectController]
+         setTableView:[(UITableViewController *)controller tableView]];
     }
     [controller.KCDObjectController setDelegate:self];
     [self.navigationController pushViewController:controller animated:YES];
@@ -323,11 +342,15 @@ didSelectItem:(id<KCDObject>)item
                       initWithLayout:[self flowLayout]
                       sections:nil];
         [(UICollectionViewController *)controller KCDCellClassRegister:[KCDDemoObject class]];
+        [(KCDCollectionViewDataSource *)[(UICollectionViewController *)controller KCDObjectController]
+         setCollectionView:[(UICollectionViewController *)controller collectionView]];
     }
     if ([NSStringFromClass(viewControllerClass) isEqualToString:NSStringFromClass([UITableViewController class])]) {
         controller = [[UITableViewController alloc]
                       initWithStyle:UITableViewStyleGrouped
                       objects:nil];
+        [(KCDTableViewDataSource *)[(UITableViewController *)controller KCDObjectController]
+         setTableView:[(UITableViewController *)controller tableView]];
     }
     [controller.KCDObjectController setDelegate:self];
     [self.navigationController pushViewController:controller animated:YES];

@@ -38,9 +38,18 @@
 
 @property (nonatomic, readonly, copy) NSString *sectionName;
 
+
+/**
+ A string value that uniquely identifies this section against all others
+ @note This is the primary value used for hashing and equality.
+ */
+
+@property (nonatomic, readonly) NSString *sectionIdentifier;
+
 /**
  A string value that can be used to decorate section header views.
  */
+
 
 @property (nonatomic, readonly, copy) NSString *sectionHeader;
 

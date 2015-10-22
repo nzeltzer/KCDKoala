@@ -20,7 +20,7 @@
 @property (nonatomic, readwrite, strong) NSMutableOrderedSet KCDGeneric(id<KCDObject>) *objects;
 @property (nonatomic, readwrite, strong) NSMutableOrderedSet KCDGeneric(id<KCDObject>) *unfilteredObjects;
 @property (nonatomic, readwrite, strong) NSMutableOrderedSet KCDGeneric(id<KCDObject>) *filteredObjects;
-@property (nonatomic, readonly, copy) NSString *sectionIdentifier;
+@property (nonatomic, readwrite, copy) NSString *sectionIdentifier;
 
 @end
 

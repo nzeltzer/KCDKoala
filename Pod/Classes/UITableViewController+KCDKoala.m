@@ -9,6 +9,7 @@
 #import "UITableViewController+KCDKoala.h"
 #import "UIViewController+KCDKoala.h"
 #import "KCDTableViewDataSource.h"
+#import "KCDObjectController.h"
 
 @implementation UITableViewController (KCDKoala)
 
@@ -53,6 +54,12 @@
         return nil;
     }
     return controller;
+}
+
+- (void)viewDidLoad;
+{
+    [super viewDidLoad];
+    NSLog(@"%@", self.tableView);
 }
 
 @end
